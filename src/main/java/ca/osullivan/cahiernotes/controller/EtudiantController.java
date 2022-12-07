@@ -33,5 +33,4 @@ public class EtudiantController {
         List<Etudiant> etudiants = etudiantService.listeEtudiants();
         return ResponseEntity.ok().body(etudiants);
     }
-
 }
