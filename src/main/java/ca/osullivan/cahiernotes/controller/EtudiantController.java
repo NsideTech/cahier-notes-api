@@ -23,8 +23,9 @@ public class EtudiantController {
     public ResponseEntity<Object> creerEtudiant(@RequestBody Etudiant etudiant){
 
         etudiantService.creerEtudiant(etudiant);
+        String message = etudiant.getNom() + " ," +" a été crée";
 
-        return ResponseEntity.ok().body(etudiant + "a été crée");
+        return ResponseEntity.ok().body(message);
     }
 
     @GetMapping(value = "/etudiants")
